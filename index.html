@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#123e52"><title>Evolução fisioterapêutica | CETIP</title>
+<style>
+:root{--navy:#123e52;--blue:#176b83;--teal:#188c83;--ink:#18313e;--muted:#607581;--line:#dce5e9;--wash:#f3f7f8}*{box-sizing:border-box}body{margin:0;background:var(--wash);color:var(--ink);font:15px/1.45 Arial,Helvetica,sans-serif}.top{background:linear-gradient(120deg,#103d52,#176b83);color:white;padding:27px max(20px,calc((100% - 1020px)/2))}.brand{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.8;font-weight:700}.top h1{font-size:25px;margin:8px 0 5px}.top p{margin:0;color:#d8e9ee}.wrap{max-width:1020px;padding:22px;margin:auto}.actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 18px;flex-wrap:wrap}.hint{font-size:13px;color:var(--muted)}button{border:0;border-radius:7px;padding:12px 18px;background:var(--teal);color:white;font-size:14px;font-weight:700;cursor:pointer}button:hover{background:#11736b}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #f0b94b;outline-offset:2px}.section{background:white;border:1px solid var(--line);border-radius:10px;margin-bottom:15px;overflow:hidden;box-shadow:0 2px 7px #123e5208}.section h2{font-size:15px;color:var(--navy);letter-spacing:.035em;text-transform:uppercase;margin:0;padding:14px 18px;border-bottom:1px solid var(--line);background:#fbfdfd}.grid{padding:17px 18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 18px}.item{min-width:0}.wide{grid-column:1/-1}.item>label,.prompt{display:block;font-size:13px;font-weight:700;color:#3d5662;margin:0 0 6px}.item input[type=text],.item input[type=date],.item textarea{width:100%;min-height:41px;border:1px solid #cbd8de;border-radius:6px;background:white;padding:9px 11px;font:14px Arial;color:var(--ink)}.item textarea{min-height:76px;resize:vertical;line-height:1.45}.choices{display:flex;flex-wrap:wrap;gap:9px 16px;min-height:32px}.choices label{display:inline-flex;align-items:center;gap:7px;font-size:14px;color:#29434f;cursor:pointer}.choices input{accent-color:var(--blue);width:16px;height:16px}.sub{margin-top:10px}.status{min-height:22px;color:#12634e;font-size:13px}.foot{text-align:center;color:var(--muted);font-size:12px;padding:8px 0 22px}@media(max-width:640px){.top{padding:22px 17px}.top h1{font-size:21px}.wrap{padding:15px 11px}.grid{grid-template-columns:1fr;padding:15px;gap:13px}.wide{grid-column:auto}.actions{align-items:flex-start}}@media print{body{background:white}.top{padding:12px;color:var(--ink);background:white;border-bottom:2px solid var(--navy)}.top p,.brand,.actions,.status,.foot{display:none}.wrap{padding:8px;max-width:none}.section{box-shadow:none;break-inside:avoid}.grid{padding:9px}}
+</style><style>
+.selection-panel{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 18px}.selection{min-width:0;margin:0;padding:12px 14px;border:1px solid var(--line);border-radius:9px;background:white}.selection.disabled{opacity:.55}.selection legend{padding:0 5px;font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em}.segmented{display:flex;gap:7px}.segmented label{position:relative;flex:1;cursor:pointer}.segmented input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer}.segmented span{display:block;text-align:center;padding:10px 12px;border:1px solid #cbd8de;border-radius:6px;color:#38515d;font-size:13px;font-weight:700}.segmented label.selected span{background:var(--navy);color:white;border-color:var(--navy)}.segmented input:focus-visible+span{outline:3px solid #f0b94b;outline-offset:2px}.selection small{display:block;margin-top:7px;color:var(--muted);font-size:11px}.mini-title{display:none}.section[hidden]{display:none!important}.night-general textarea{min-height:152px}.night-general .grid{grid-template-columns:minmax(0,1fr)}button:disabled{opacity:.7;cursor:wait}
+@media(max-width:640px){.selection-panel{grid-template-columns:1fr;gap:8px}}@media print{.selection-panel,.hint{display:none!important}}
+</style><style>.cbdf-link{display:inline-flex;align-items:center;gap:6px;margin-top:9px;padding:8px 11px;border:1px solid #c5dbe0;border-radius:7px;background:#edf6f7;color:#176b83;font-size:13px;font-weight:700;text-decoration:none;transition:background .15s,border-color .15s}.cbdf-link:hover{background:#deeff1;border-color:#8bbbc4}.cbdf-link:focus-visible{outline:3px solid #f0b94b;outline-offset:2px}@media print{.cbdf-link{display:none}}</style></head><body>
+<header class="top"><div class="brand">Fisioterapia · CETIP</div><h1>Evolução fisioterapêutica pediátrica</h1><p>Preencha os campos. O botão monta a evolução em texto simples.</p></header>
+<main class="wrap"><p class="hint">Campos opcionais. O texto copiado traz os enunciados, as respostas preenchidas e os separadores.</p>
+<div class="selection-panel">
+<fieldset class="selection"><legend>Tipo de registro</legend><div class="segmented"><label class="selected"><input type="radio" name="tipoRegistro" value="evolucao" checked><span>EVOLUÇÃO</span></label><label><input type="radio" name="tipoRegistro" value="avaliacao"><span>AVALIAÇÃO</span></label></div></fieldset>
+<fieldset class="selection" id="turnoPanel"><legend>Turno da evolução</legend><div class="segmented"><label class="selected"><input type="radio" name="turno" value="SD" checked><span>SD</span></label><label><input type="radio" name="turno" value="SN"><span>SN</span></label></div><small>O turno só altera os campos quando o tipo selecionado é Evolução.</small></fieldset>
+</div>
+<form id="formulario" autocomplete="off">
+<section class="section" data-key="personal" data-title="INFORMAÇÕES PESSOAIS"><h2>Informações pessoais</h2><div class="grid">
+<div class="item"><label>Nome</label><input type="text" data-label="Nome" placeholder="Nome do paciente"></div><div class="item"><label>Data</label><input type="date" data-label="Data"></div>
+<div class="item"><label>Prontuário</label><input type="text" data-label="Prontuário"></div><div class="item"><label>Leito</label><input type="text" data-label="Leito"></div><div class="item"><label>Peso</label><input type="text" data-label="Peso" placeholder="kg"></div><div class="item"><label>DI no setor</label><input type="date" data-label="DI no setor"></div>
+</div></section>
+<section class="section" data-key="vitals" data-title="SINAIS VITAIS"><h2>Sinais vitais</h2><div class="grid">
+<div class="item"><label>FC</label><input type="text" data-label="FC" placeholder="bpm"></div><div class="item"><label>PA</label><input type="text" data-label="PA" placeholder="____ x ____ mmHg"></div><div class="item"><label>FR</label><input type="text" data-label="FR" placeholder="rpm"></div><div class="item"><label>SpO₂</label><input type="text" data-label="SpO2" placeholder="%"></div><div class="item"><label>TAx</label><input type="text" data-label="TAx" placeholder="°C"></div>
+<div class="item"><span class="prompt">Suporte de aminas</span><div class="choices" data-label="Suporte de aminas" data-type="radio"><label><input type="radio" name="aminas" value="Não">Não</label><label><input type="radio" name="aminas" value="Sim">Sim</label></div><div class="sub"><label>Drogas</label><input type="text" data-label="Drogas (aminas)"></div></div>
+</div></section>
+<section class="section night-general" data-key="general" data-title="AVALIAÇÃO GERAL" hidden><h2>Avaliação geral</h2><div class="grid"><div class="item wide"><label for="avaliacaoGeralSN">Avaliação geral</label><textarea id="avaliacaoGeralSN" data-label="Avaliação geral" placeholder="Descreva de forma objetiva a avaliação geral do paciente neste turno."></textarea></div></div></section>
+<section class="section" data-key="behavior" data-title="ESTADO COMPORTAMENTAL / NÍVEL DE CONSCIÊNCIA"><h2>Estado comportamental / nível de consciência</h2><div class="grid">
+<div class="item"><span class="prompt">Sedado</span><div class="choices" data-label="Sedado" data-type="radio"><label><input type="radio" name="sedado" value="Não">Não</label><label><input type="radio" name="sedado" value="Sim">Sim</label></div><div class="sub"><label>Drogas</label><input type="text" data-label="Drogas (sedação)"></div></div>
+<div class="item"><span class="prompt">Bloqueador neuromuscular</span><div class="choices" data-label="Bloqueador neuromuscular" data-type="radio"><label><input type="radio" name="bnm" value="Não">Não</label><label><input type="radio" name="bnm" value="Sim">Sim</label></div><div class="sub"><label>Droga</label><input type="text" data-label="Droga (bloqueador neuromuscular)"></div></div>
+<div class="item"><label>RASS</label><input type="text" data-label="RASS"></div><div class="item"><span class="prompt">Abstinência de sedação</span><div class="choices" data-label="Abstinência de sedação" data-type="radio"><label><input type="radio" name="abstinencia" value="Não">Não</label><label><input type="radio" name="abstinencia" value="Sim">Sim</label></div><div class="sub"><label>WAT-1</label><input type="text" data-label="WAT-1"></div></div>
+<div class="item wide"><label>Escala de Glasgow</label><input type="text" data-label="Escala de Glasgow" placeholder="Abertura ocular (O) · Resposta verbal (V) · Resposta motora (M) · Total"></div>
+<div class="item wide"><span class="prompt">Escala de dor</span><div class="choices" data-label="Escala de dor" data-type="checkbox"><label><input type="checkbox" value="EVA">EVA</label><label><input type="checkbox" value="FLACC-R">FLACC-R</label><label><input type="checkbox" value="NA">NA</label></div><div class="sub"><label>Pontuação / valor</label><input type="text" data-label="Pontuação da dor"></div><div class="sub"><label>Localização da dor</label><input type="text" data-label="Localização da dor"></div></div>
+</div></section>
+<section class="section" data-key="respiratory" data-title="AVALIAÇÃO RESPIRATÓRIA"><h2>Avaliação respiratória</h2><div class="mini-title">Avaliação respiratória</div><div class="grid">
+<div class="item wide"><span class="prompt">Oxigenioterapia</span><div class="choices" data-label="Oxigenioterapia" data-type="radio"><label><input type="radio" name="o2" value="Sim">Sim</label><label><input type="radio" name="o2" value="Não">Não</label></div></div>
+<div class="item"><span class="prompt">Dispositivos / modalidades</span><div class="choices" data-label="Dispositivos e modalidades de oxigenioterapia" data-type="checkbox"><label><input type="checkbox" value="Cateter nasal">Cateter nasal</label><label><input type="checkbox" value="Máscara com reservatório">Máscara com reservatório</label><label><input type="checkbox" value="Macronebulização">Macronebulização</label><label><input type="checkbox" value="Cateter nasal de alto fluxo">Cateter nasal de alto fluxo</label><label><input type="checkbox" value="Ventilação não invasiva">Ventilação não invasiva</label></div></div>
+<div class="item"><label>Fluxo de O₂</label><input type="text" data-label="Fluxo de O2" placeholder="L/min; descreva por dispositivo se necessário"></div><div class="item"><label>Parâmetros do cateter nasal de alto fluxo</label><input type="text" data-label="Cateter nasal de alto fluxo" placeholder="Fluxo (L/min) · Temperatura (°C) · FiO₂"></div><div class="item"><label>Interface da VNI</label><input type="text" data-label="Interface da VNI"></div>
+<div class="item"><label>Ausculta pulmonar (AP)</label><textarea data-label="Ausculta pulmonar (AP)"></textarea></div><div class="item"><label>STB / características</label><textarea data-label="STB / características"></textarea></div><div class="item"><label>Tosse</label><textarea data-label="Tosse"></textarea></div><div class="item"><label>Esforço respiratório</label><textarea data-label="Esforço respiratório"></textarea></div><div class="item"><label>Padrão respiratório</label><textarea data-label="Padrão respiratório"></textarea></div><div class="item"><label>Expansibilidade torácica</label><textarea data-label="Expansibilidade torácica"></textarea></div>
+<div class="item"><span class="prompt">Cianose</span><div class="choices" data-label="Cianose" data-type="radio"><label><input type="radio" name="cianose" value="Ausente">Ausente</label><label><input type="radio" name="cianose" value="Presente">Presente</label></div><div class="sub"><label>Local / observação</label><input type="text" data-label="Cianose: local / observação"></div></div>
+</div></section>
+<section class="section" data-key="motor" data-title="AVALIAÇÃO MOTORA"><h2>Avaliação motora</h2><div class="mini-title">Avaliação motora</div><div class="grid">
+<div class="item wide"><label>Movimentação voluntária</label><textarea data-label="Movimentação voluntária"></textarea></div>
+<div class="item"><span class="prompt">Tônus</span><div class="choices" data-label="Tônus" data-type="checkbox"><label><input type="checkbox" value="Normal">Normal</label><label><input type="checkbox" value="Hipotonia">Hipotonia</label><label><input type="checkbox" value="Hipertonia">Hipertonia</label></div></div><div class="item"><span class="prompt">Força muscular</span><div class="choices" data-label="Força muscular" data-type="checkbox"><label><input type="checkbox" value="Normal">Normal</label><label><input type="checkbox" value="Reduzida">Reduzida</label></div></div>
+<div class="item"><span class="prompt">Marcos de desenvolvimento</span><div class="choices" data-label="Marcos de desenvolvimento" data-type="checkbox"><label><input type="checkbox" value="Normais">Normais</label><label><input type="checkbox" value="Alterados">Alterados</label></div><div class="sub"><label>Descrever</label><textarea data-label="Descrição dos marcos de desenvolvimento"></textarea></div></div><div class="item"><label>Pediatric Functional Status Scale (FSS)</label><input type="text" data-label="Pediatric Functional Status Scale (FSS)"></div>
+</div></section>
+<section class="section evaluation-fields" data-key="evaluation" data-mode="avaliacao" data-title="AVALIAÇÃO FISIOTERAPÊUTICA"><h2>Avaliação fisioterapêutica</h2><div class="grid">
+<div class="item wide"><label>Diagnóstico fisioterapêutico</label><textarea data-label="Diagnóstico fisioterapêutico"></textarea><a class="cbdf-link" href="https://cbdf.coffito.gov.br/cbdf" target="_blank" rel="noopener noreferrer" aria-label="Consultar Classificação Brasileira de Diagnósticos Fisioterapêuticos (CBDF) no site do COFFITO (abre em nova aba)">Consultar CBDF no COFFITO ↗</a></div>
+<div class="item wide"><label>Prognóstico fisioterapêutico</label><textarea data-label="Prognóstico fisioterapêutico"></textarea></div>
+<div class="item wide"><label>Objetivos</label><textarea data-label="Objetivos"></textarea></div>
+<div class="item wide"><label>Recursos</label><textarea data-label="Recursos"></textarea></div>
+<div class="item"><label>Quantidade de atendimentos</label><input type="number" min="0" step="1" data-label="Quantidade de atendimentos"></div>
+</div></section>
+<section class="section" data-key="conduct" data-title="CONDUTA REALIZADA"><h2>Conduta realizada</h2><div class="grid"><div class="item wide"><label>Procedimentos e condutas</label><textarea data-label="Conduta realizada" placeholder="Descreva as intervenções realizadas"></textarea></div></div></section>
+<section class="section" data-key="observations" data-title="IMPRESSÃO / EVENTUAIS INTERCORRÊNCIAS"><h2>Impressão / eventuais intercorrências</h2><div class="grid"><div class="item wide"><label>Impressão clínica e intercorrências</label><textarea data-label="Impressão / eventuais intercorrências"></textarea></div></div></section>
+<section class="section" data-key="professional" data-title="IDENTIFICAÇÃO PROFISSIONAL"><h2>Identificação profissional</h2><div class="grid"><div class="item"><label>Fisioterapeuta</label><input type="text" data-label="Fisioterapeuta"></div><div class="item"><label>CREFITO</label><input type="text" data-label="CREFITO"></div></div></section>
+ </form><div class="actions"><span class="hint">Revise os dados preenchidos e copie a evolução.</span><button id="copiar" type="button">Copiar evolução em texto</button></div><p id="status" class="status" role="status" aria-live="polite"></p><div class="foot">Texto simples com separadores, pronto para colar em TXT ou no prontuário.</div></main>
+<script>
+'use strict';
+const form=document.getElementById('formulario'),status=document.getElementById('status'),button=document.getElementById('copiar'),title=document.querySelector('.top h1'),turnoPanel=document.getElementById('turnoPanel');
+function selected(name){return document.querySelector('input[name="'+name+'"]:checked').value}
+function updateMode(){
+  const mode=selected('tipoRegistro');
+  const isEval=mode==='avaliacao';
+  const isNight=!isEval&&selected('turno')==='SN';
+  // No SN, somente cinco seções permanecem visíveis e são copiadas.
+  const nightSections=new Set(['personal','vitals','general','conduct','observations']);
+  form.querySelectorAll('.section').forEach(section=>{
+    const key=section.dataset.key;
+    if(isNight){section.hidden=!nightSections.has(key)}
+    else if(key==='general'){section.hidden=true}
+    else if(key==='evaluation'){section.hidden=!isEval}
+    else{section.hidden=false}
+  });
+  turnoPanel.classList.toggle('disabled',isEval);
+  turnoPanel.querySelectorAll('input').forEach(x=>x.disabled=isEval);
+  title.textContent=(isEval?'Avaliação':'Evolução')+' fisioterapêutica pediátrica';
+  button.textContent=isEval?'Copiar avaliação em texto':'Copiar evolução em texto';
+  document.querySelectorAll('.segmented label').forEach(label=>label.classList.toggle('selected',label.querySelector('input').checked));
+  const conduct=form.querySelector('[data-key="conduct"]');
+  const observations=form.querySelector('[data-key="observations"]');
+  conduct.querySelector('h2').textContent=isNight?'Condutas':'Conduta realizada';
+  conduct.querySelector('label').textContent=isNight?'Condutas':'Procedimentos e condutas';
+  conduct.querySelector('textarea').dataset.label=isNight?'Condutas':'Conduta realizada';
+  observations.querySelector('h2').textContent=isNight?'Observações':'Impressão / eventuais intercorrências';
+  observations.querySelector('label').textContent=isNight?'Observações':'Impressão clínica e intercorrências';
+  observations.querySelector('textarea').dataset.label=isNight?'Observações':'Impressão / eventuais intercorrências';
+}
+document.querySelectorAll('input[name="tipoRegistro"],input[name="turno"]').forEach(x=>x.addEventListener('change',updateMode));updateMode();
+function answer(item){if(item.matches('input:not([type="radio"]):not([type="checkbox"]),textarea,select')){let v=item.value.trim();if(item.type==='date'&&v){const [y,m,d]=v.split('-');v=d+'/'+m+'/'+y}return v}const checked=[...item.querySelectorAll('input:checked')].map(x=>x.value);return item.dataset.type==='radio'?(checked[0]||''):checked.join(', ')}
+function buildText(){
+  const isEval=selected('tipoRegistro')==='avaliacao';
+  const isNight=!isEval&&selected('turno')==='SN';
+  const out=[(isEval?'AVALIAÇÃO':'EVOLUÇÃO')+' FISIOTERAPÊUTICA PEDIÁTRICA','='.repeat(64)];
+  for(const section of form.querySelectorAll('.section')){
+    // Não exporta campos dos outros modos nem dados antigos que ficaram ocultos.
+    if(section.hidden)continue;
+    const key=section.dataset.key;
+    const heading=isNight&&key==='conduct'?'CONDUTAS':isNight&&key==='observations'?'OBSERVAÇÕES':section.dataset.title;
+    out.push('',heading,'-'.repeat(64));
+    for(const item of section.querySelectorAll('[data-label]')){
+      out.push((item.dataset.label+': '+answer(item)).trimEnd());
+    }
+  }
+  return out.join('\n');
+}
+async function fallbackCopy(text){const box=document.createElement('textarea');box.value=text;box.setAttribute('readonly','');box.style.position='fixed';box.style.opacity='0';document.body.appendChild(box);box.select();box.setSelectionRange(0,box.value.length);let ok=false;try{ok=document.execCommand('copy')}catch(e){}box.remove();return ok}
+let copying=false;button.addEventListener('click',async()=>{if(copying)return;copying=true;button.disabled=true;button.setAttribute('aria-busy','true');button.textContent='Copiando…';status.textContent='';const isEval=selected('tipoRegistro')==='avaliacao';try{const text=buildText();let ok=false;try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);ok=true}}catch(e){}if(!ok)ok=await fallbackCopy(text);status.textContent=ok?'✓ '+(isEval?'Avaliação':'Evolução')+' copiada com sucesso. Você já pode colar o texto.':'Não foi possível copiar automaticamente. Tente novamente em uma página segura.'}finally{copying=false;button.disabled=false;button.removeAttribute('aria-busy');button.textContent=isEval?'Copiar avaliação em texto':'Copiar evolução em texto'}});
+</script></body></html>
